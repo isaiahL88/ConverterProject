@@ -17,10 +17,7 @@ public class ConverterMenuBar extends JMenuBar {
 		JMenuItem menuItem = new JMenuItem("Save input centimeters", KeyEvent.VK_F);
 		menuItem.setMnemonic(KeyEvent.VK_F);
 		menuItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_F, ActionEvent.ALT_MASK));
-		
-		
-		
-		
+		menuItem.addActionListener(menubarListener);
 		gameMenu.add(menuItem);
 		super.add(gameMenu);
 	}

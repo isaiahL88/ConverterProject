@@ -46,6 +46,7 @@ public class ConverterApp {
 // 		displayFrame.setLocationRelativeTo(null);
 // 		displayFrame.setResizable(false);
 // 		displayFrame.setVisible(true);
+		DisplayPanel mainPanel = new DisplayPanel();
 
 	}
 

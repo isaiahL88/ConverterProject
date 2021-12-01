@@ -15,6 +15,8 @@ public class MenubarListener implements ActionListener{
 	
 	//@Override
 	public void actionPerformed(ActionEvent e) {
-		
+		String value = this.displayPanel.CentimetersConversionArea.getText();
+		double centimetes = Double.parseDouble(value);
+		this.displayPanel.valueModel.setValue(centimetes);
 	}
 }
