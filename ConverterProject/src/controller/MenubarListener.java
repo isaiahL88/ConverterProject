@@ -21,6 +21,11 @@ public class MenubarListener implements ActionListener{
 		v=r;
 	}
 	//@Override
+	/*
+	* Preconditions: 
+  	* Postconditions: retrieves value specified by the user in the CentimetersConversionArea JTextArea and sets the new state of ValueToConvert with it
+	* @throws NumberFormatException if it is not possible to convert the string 'value' into a double 
+	*/
 	public void actionPerformed(ActionEvent e) {
 		String value = c.getValue();
 		
