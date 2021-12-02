@@ -11,4 +11,14 @@ public class ValueToConvert {
 	public double getValue() {
 		return this.value;
 	}
+	
+	public void CmToFeet() {
+		double valueinfeet = value /2.54;
+		System.out.println("@@@@@NEW VALUE IN feet: " + valueinfeet);
+	}
+	
+	public void CmToMeter() {
+		double valueinmeter = value /100;
+		System.out.println("@@@@@NEW VALUE IN meter: " + valueinmeter);
+	}
 }
