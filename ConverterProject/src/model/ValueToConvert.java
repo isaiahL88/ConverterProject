@@ -21,7 +21,6 @@ public class ValueToConvert {
 	}
 	public void setValue(double value) {
 		this.value = value;
-//		System.out.println("@@@@@NEW VALUE IN MODEL: " + value);
 		notifyObserver();
 	}
 	//mutator for observer: attach detach notify
