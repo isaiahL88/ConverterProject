@@ -10,9 +10,9 @@ public class MeterConversionArea extends JTextArea implements Observer{
 		super(s,x,y);
 	}
         /*
-	* Preconditions:
-  	* Postconditions: 
- 	* @param 
+	* Preconditions: parameter value is a centimeter value
+  	* Postconditions: parameter value is converted from a centimeter value to a meter value 
+ 	* @param value the value needed to convert to meters
 	*/
 	public void updateVal(double value) {
 		
