@@ -3,20 +3,27 @@ package controller;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import view.DisplayPanel;
+import view.CentimetersConversionArea;
+//import view.DisplayPanel;
 import javax.swing.JOptionPane;
+
+import model.ValueToConvert;
 
 public class MenubarListener implements ActionListener{
 	
-	private final DisplayPanel displayPanel;
-
-	public MenubarListener(DisplayPanel panel) {
-		displayPanel = panel;
+	private CentimetersConversionArea c;
+	private ValueToConvert v;
+	public MenubarListener() {
 	}
-	
+	public void setReciever(CentimetersConversionArea r) {
+		c=r;
+	}
+	public void setVTC(ValueToConvert r) {
+		v=r;
+	}
 	//@Override
 	public void actionPerformed(ActionEvent e) {
-		String value = this.displayPanel.CentimetersConversionArea.getText();
+		String value = c.getValue();
 		
 		try {
 			double centimetes = Double.parseDouble(value);
@@ -24,6 +31,6 @@ public class MenubarListener implements ActionListener{
 			JOptionPane.showMessageDialog(null, "please enter a number", "error", JOptionPane.INFORMATION_MESSAGE);
 		}
 		double centimetes = Double.parseDouble(value);
-		this.displayPanel.valueModel.setValue(centimetes);
+		v.setValue(centimetes);
 	}
 }
