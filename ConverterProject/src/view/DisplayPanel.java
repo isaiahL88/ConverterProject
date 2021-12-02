@@ -11,10 +11,12 @@ import model.ValueToConvert;
 
 public class DisplayPanel extends JPanel {
 	public JTextArea CentimetersConversionArea;
+	public FeetConversionArea FCA;
+	public MeterConversionArea MCA;
 	public ValueToConvert valueModel;
 	
 	public DisplayPanel() {
-		this.valueModel = new ValueToConvert();
+		this.valueModel = new ValueToConvert(this);
 		JFrame displayFrame = new JFrame("Mini Soccer");
 		MenubarListener menubarListener = new MenubarListener(this);
 		ConverterMenuBar displayMenuBar = new ConverterMenuBar(menubarListener);
@@ -28,20 +30,22 @@ public class DisplayPanel extends JPanel {
 		CentimetersConversionArea.setBounds(290, 310, 300, 300);
 		CentimetersConversionArea.setLineWrap(true);
 		this.add(CentimetersConversionArea);
-
-		JTextArea FeetConversionArea = new JTextArea("0 ft", 20, 20);
+		FCA = new FeetConversionArea("0 ft", 20, 20);
 		Color colorFeet = new Color(50, 205, 50);
-		FeetConversionArea.setBackground(colorFeet);
-		FeetConversionArea.setBounds(140, 5, 300, 300);
-		FeetConversionArea.setLineWrap(true);
-		this.add(FeetConversionArea);
-
-		JTextArea MeterConversionArea = new JTextArea("0 m", 20, 20);
+		FCA.setBackground(colorFeet);
+		FCA.setBounds(140, 5, 300, 300);
+		FCA.setLineWrap(true);
+		this.add(FCA);
+		//add observer
+		valueModel.addObserver(FCA);
+		MCA = new MeterConversionArea("0 m", 20, 20);
 		Color colorMeter = new Color(255, 165, 0);
-		MeterConversionArea.setBackground(colorMeter);
-		MeterConversionArea.setBounds(445, 5, 300, 300);
-		MeterConversionArea.setLineWrap(true);
-		this.add(MeterConversionArea);
+		MCA.setBackground(colorMeter);
+		MCA.setBounds(445, 5, 300, 300);
+		MCA.setLineWrap(true);
+		this.add(MCA);
+		//add observer
+		valueModel.addObserver(MCA);
 
 		displayFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		displayFrame.setSize(900, 900);
