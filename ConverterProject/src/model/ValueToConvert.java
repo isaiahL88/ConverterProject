@@ -3,17 +3,17 @@ package model;
 import java.util.ArrayList;
 //import java.util.Observer;
 
-import view.DisplayPanel;
+//import view.DisplayPanel;
 import view.Observer;
 
 public class ValueToConvert {
 	private double value;
 	//create list of observers
 	private ArrayList<Observer> listOfObservers;
-	private final DisplayPanel displayPanel;
+	//private final DisplayPanel displayPanel;
 
-	public ValueToConvert(DisplayPanel panel) {
-		displayPanel = panel;
+	public ValueToConvert() {
+		//displayPanel = panel;
 		listOfObservers=new ArrayList<Observer>();
 	}
 	public double getValue() {
