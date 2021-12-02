@@ -4,7 +4,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import view.CentimetersConversionArea;
-//import view.DisplayPanel;
 import javax.swing.JOptionPane;
 
 import model.ValueToConvert;
