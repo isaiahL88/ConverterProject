@@ -10,26 +10,29 @@ import controller.MenubarListener;
 import model.ValueToConvert;
 
 public class DisplayPanel extends JPanel {
-	public JTextArea CentimetersConversionArea;
+	public CentimetersConversionArea CMA;
 	public FeetConversionArea FCA;
 	public MeterConversionArea MCA;
 	public ValueToConvert valueModel;
 	
 	public DisplayPanel() {
-		this.valueModel = new ValueToConvert(this);
+		this.valueModel = new ValueToConvert();
 		JFrame displayFrame = new JFrame("Mini Soccer");
-		MenubarListener menubarListener = new MenubarListener(this);
+		MenubarListener menubarListener = new MenubarListener();
 		ConverterMenuBar displayMenuBar = new ConverterMenuBar(menubarListener);
 		displayFrame.add(this);
 		displayFrame.setJMenuBar(displayMenuBar);
 
+		menubarListener.setVTC(valueModel);
 		this.setLayout(null);
-		this.CentimetersConversionArea = new JTextArea("0", 20, 20);
+		CMA = new CentimetersConversionArea("0", 20, 20);
 		Color colorCentimeters = new Color(255, 255, 0);
-		CentimetersConversionArea.setBackground(colorCentimeters);
-		CentimetersConversionArea.setBounds(290, 310, 300, 300);
-		CentimetersConversionArea.setLineWrap(true);
-		this.add(CentimetersConversionArea);
+		CMA.setBackground(colorCentimeters);
+		CMA.setBounds(290, 310, 300, 300);
+		CMA.setLineWrap(true);
+		this.add(CMA);
+		menubarListener.setReciever(CMA);
+		
 		FCA = new FeetConversionArea("0 ft", 20, 20);
 		Color colorFeet = new Color(50, 205, 50);
 		FCA.setBackground(colorFeet);
