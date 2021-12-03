@@ -24,13 +24,20 @@ public class ValueToConvert {
 		notifyObserver();
 	}
 	//mutator for observer: attach detach notify
+	//Adds an observer to the ArrayList of observers for this object
 	public void addObserver(Observer o) {
 		listOfObservers.add(o);
 	}
+	
+	//remove an observer to the ArrayList of observers for this object
 	public void removeObserver(Observer o) {
 		listOfObservers.remove(o);
 	}
 	
+	//update value to all observer in the list
+	//Each observer has its update method called
+	//precondition: value is changed and this method is getting called
+	//postcondition: all observer in the ArrayList is updated
 	public void notifyObserver() {
 		for (Observer o: listOfObservers)
 			o.updateVal(value);
