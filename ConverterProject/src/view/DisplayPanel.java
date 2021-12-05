@@ -9,6 +9,13 @@ import javax.swing.JTextArea;
 import controller.MenubarListener;
 import model.ValueToConvert;
 
+/** create the vitual interface for converterApp
+* create centimeter converstion area set the color and add to reciever
+* create feet converstion area set the color and add to observer
+* create meter converstion area set the color and add to observer
+* set displayFrame.
+*/
+
 public class DisplayPanel extends JPanel {
 	public CentimetersConversionArea CMA;
 	public FeetConversionArea FCA;
