@@ -5,6 +5,13 @@ import java.text.DecimalFormat;
 import javax.swing.*;
 
 public class MeterConversionArea extends JTextArea implements Observer{
+
+        /*
+	* constructor for JtextArea from DisplayPanel
+ 	* @param s A string contain preset text in MeterConversionArea
+	* @param x A integer to constructs JTextArea with the specified number of rows 
+	* @param y A integer to constructs JTextArea with the specified number of columns 
+	*/
 	
 	public MeterConversionArea(String s, int x, int y) {
 		super(s,x,y);
