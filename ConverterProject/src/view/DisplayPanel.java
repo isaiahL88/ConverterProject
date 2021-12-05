@@ -24,7 +24,7 @@ public class DisplayPanel extends JPanel {
 	
 	public DisplayPanel() {
 		this.valueModel = new ValueToConvert();
-		JFrame displayFrame = new JFrame("Mini Soccer");
+		JFrame displayFrame = new JFrame("Converter");
 		MenubarListener menubarListener = new MenubarListener();
 		ConverterMenuBar displayMenuBar = new ConverterMenuBar(menubarListener);
 		displayFrame.add(this);
