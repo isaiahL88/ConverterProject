@@ -9,6 +9,12 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.KeyStroke;
 
+		/** create the vitual interface for MenuBar
+		* create a "Update model" button at MenuBar
+		* create a "Save input centimeters" button inside Update model with shortcut key alt+f
+		* add the action to menubarListener
+		*/
+
 public class ConverterMenuBar extends JMenuBar {
 	public ConverterMenuBar(ActionListener menubarListener) {
 		super();
