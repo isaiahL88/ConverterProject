@@ -33,11 +33,12 @@ public class ValueToConvert {
 	public void removeObserver(Observer o) {
 		listOfObservers.remove(o);
 	}
-	
-	//update value to all observer in the list
-	//Each observer has its update method called
-	//precondition: value is changed and this method is getting called
-	//postcondition: all observer in the ArrayList is updated
+	/*
+	*update value to all observer in the list
+	*Each observer has its update method called
+	*precondition: value is changed and this method is getting called
+	*postcondition: all observer in the ArrayList is updated
+	*/
 	public void notifyObserver() {
 		for (Observer o: listOfObservers)
 			o.updateVal(value);
