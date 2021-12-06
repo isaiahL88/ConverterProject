@@ -4,6 +4,10 @@ import javax.swing.*;
 /** 
 * CentimetersConversionArea for displayPanel
 */
+
+	/*
+	* The class invariant is that there is always a value to convert
+	*/
 public class CentimetersConversionArea extends JTextArea{
 	
 	/**
