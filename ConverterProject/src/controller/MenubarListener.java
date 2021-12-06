@@ -14,9 +14,19 @@ public class MenubarListener implements ActionListener{
 	private ValueToConvert v;
 	public MenubarListener() {
 	}
+	
+	/**
+	* set the reciever to CentimetersConversionArea
+	*/
+	
 	public void setReciever(CentimetersConversionArea r) {
 		c=r;
 	}
+	
+	/**
+	* preset the ValueToconvert
+	*/
+	
 	public void setVTC(ValueToConvert r) {
 		v=r;
 	}
