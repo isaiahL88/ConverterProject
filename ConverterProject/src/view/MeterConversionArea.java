@@ -4,12 +4,12 @@ import java.text.DecimalFormat;
 
 import javax.swing.*;
 	
-	/*
+	/**
 	* The class invariant is that there is always a value to convert
 	*/
 public class MeterConversionArea extends JTextArea implements Observer{
 
-        /*
+        /**
 	* constructor for JtextArea from DisplayPanel
  	* @param s A string contain preset text in MeterConversionArea
 	* @param x A integer to constructs JTextArea with the specified number of rows 
@@ -19,7 +19,7 @@ public class MeterConversionArea extends JTextArea implements Observer{
 	public MeterConversionArea(String s, int x, int y) {
 		super(s,x,y);
 	}
-        /*
+        /**
 	* Preconditions: parameter value is a centimeter value
   	* Postconditions: parameter value is converted from a centimeter value to a meter value 
  	* @param value the value needed to convert to meters
