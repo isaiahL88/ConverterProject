@@ -37,16 +37,18 @@ public class DisplayPanel extends JPanel {
 	 */
 	public ValueToConvert valueModel;
 	
-	
-	public DisplayPanel() {
-		this.valueModel = new ValueToConvert();
+	/**
+	 * 
+	 * @param model
+	 */
+	public DisplayPanel(ValueToConvert model, MenubarListener controller) {
+		this.valueModel = model;
 		JFrame displayFrame = new JFrame("Converter");
-		MenubarListener menubarListener = new MenubarListener();
-		ConverterMenuBar displayMenuBar = new ConverterMenuBar(menubarListener);
+		ConverterMenuBar displayMenuBar = new ConverterMenuBar(controller);
 		displayFrame.add(this);
 		displayFrame.setJMenuBar(displayMenuBar);
 
-		menubarListener.setRecieverVTC(valueModel);
+		controller.setRecieverVTC(valueModel);
 		this.setLayout(null);
 		CMA = new CentimetersConversionArea("0", 20, 20);
 		Color colorCentimeters = new Color(255, 255, 0);
@@ -54,7 +56,7 @@ public class DisplayPanel extends JPanel {
 		CMA.setBounds(290, 310, 300, 300);
 		CMA.setLineWrap(true);
 		this.add(CMA);
-		menubarListener.setReciever(CMA);
+		controller.setReciever(CMA);
 		
 		FCA = new FeetConversionArea("0 ft", 20, 20);
 		Color colorFeet = new Color(50, 205, 50);

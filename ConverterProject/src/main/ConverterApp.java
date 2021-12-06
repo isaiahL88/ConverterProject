@@ -6,6 +6,7 @@ import javax.swing.JFrame;
 import javax.swing.JTextArea;
 
 import controller.MenubarListener;
+import model.ValueToConvert;
 import view.ConverterMenuBar;
 import view.DisplayPanel;
 
@@ -20,7 +21,9 @@ public class ConverterApp {
 	*/
 	public static void main(String[] args) {
 
-		DisplayPanel mainPanel = new DisplayPanel();
+		ValueToConvert model = new ValueToConvert();
+		MenubarListener controller = new MenubarListener();
+		DisplayPanel mainPanel = new DisplayPanel(model, controller);
 
 	}
 
