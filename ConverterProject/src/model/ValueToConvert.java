@@ -6,6 +6,10 @@ import java.util.ArrayList;
 //import view.DisplayPanel;
 import view.Observer;
 
+/**
+* get and encapsulate the value, methods that relate to the Observers
+*/
+
 public class ValueToConvert {
 	private double value;
 	//create list of observers
@@ -23,6 +27,7 @@ public class ValueToConvert {
 	/**
 	* get the value of input
 	* postcondition: get the value of input from CentimetersConversionArea
+	* @return the input value in centimeteresConversionArea
 	*/
 	public double getValue() {
 		return this.value;
@@ -41,6 +46,7 @@ public class ValueToConvert {
 	//mutator for observer: attach detach notify
 	/**
 	*Adds an observer to the ArrayList of observers for this object
+	*@param o Observer that add into ArrayList
 	*/
 	
 	public void addObserver(Observer o) {
@@ -48,6 +54,7 @@ public class ValueToConvert {
 	}
 	/**
 	*remove an observer to the ArrayList of observers for this object
+	*@param o Observer that remove into ArrayList
 	*/
 	public void removeObserver(Observer o) {
 		listOfObservers.remove(o);
