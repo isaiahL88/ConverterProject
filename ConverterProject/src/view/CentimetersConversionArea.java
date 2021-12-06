@@ -1,5 +1,9 @@
 package view;
 import javax.swing.*;
+
+/** 
+* CentimetersConversionArea for displayPanel
+*/
 public class CentimetersConversionArea extends JTextArea{
 	
 	/*
