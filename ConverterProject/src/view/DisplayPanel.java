@@ -17,9 +17,21 @@ import model.ValueToConvert;
 */
 
 public class DisplayPanel extends JPanel {
+	/**
+	 * Area for Centimeter
+	 */
 	public CentimetersConversionArea CMA;
+	/**
+	 * Area for feet
+	 */
 	public FeetConversionArea FCA;
+	/**
+	 * Area for meter
+	 */
 	public MeterConversionArea MCA;
+	/**
+	 * add methods from ValueModel
+	 */
 	public ValueToConvert valueModel;
 	
 	public DisplayPanel() {
