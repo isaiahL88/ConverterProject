@@ -6,7 +6,7 @@ import javax.swing.*;
 */
 public class CentimetersConversionArea extends JTextArea{
 	
-	/*
+	/**
 	* constructor for JtextArea from DisplayPanel
  	* @param s A string contain preset text in MeterConversionArea
 	* @param x A integer to constructs JTextArea with the specified number of rows 
