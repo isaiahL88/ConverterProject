@@ -54,7 +54,7 @@ public class ValueToConvert {
 	}
 	/**
 	*remove an observer to the ArrayList of observers for this object
-	*@param o Observer that remove into ArrayList
+	*@param o Observer that remove from ArrayList
 	*/
 	public void removeObserver(Observer o) {
 		listOfObservers.remove(o);
