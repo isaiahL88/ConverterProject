@@ -9,13 +9,19 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.KeyStroke;
 
-		/** create the vitual interface for MenuBar
-		* create a "Update model" button at MenuBar
-		* create a "Save input centimeters" button inside Update model with shortcut key alt+f
-		* add the action to menubarListener
-		*/
-
+/**
+ * ConverterMenuBar is used as the Invoker in the command pattern and instantiates the
+ * menu bar of the interface, inheriting properties from the JMenuBar. It constructs
+ * a bar at the top of the interface and will receive a signal with button clicked 
+ * or shortcut key pressed and invoke a command to act on CentimetersConversionArea and ValueToConver.
+ *
+ */
 public class ConverterMenuBar extends JMenuBar {
+	
+	/**
+	 * Instantiantes Menu and MenuItems Inside this JMenuBar, also invokes command menuBarListener
+	 * @param menubarListener
+	 */
 	public ConverterMenuBar(ActionListener menubarListener) {
 		super();
 		

@@ -19,8 +19,9 @@ public class FeetConversionArea extends JTextArea implements Observer{
 		super(s,x,y);
 	}
 	/**
-	* Preconditions: parameter value is a centimeter value
-  	* Postconditions: parameter value is converted from a centimeter value to a feet value 
+	* Preconditions: parameter value is a centimeter value. 
+  	* Postcondition: parameter value is converted from a centimeter value to a feet value.
+  	* 
  	* @param value the value needed to convert to feet
 	*/
 	public void updateVal(double value) {

@@ -9,11 +9,14 @@ import javax.swing.JTextArea;
 import controller.MenubarListener;
 import model.ValueToConvert;
 
-/** create the vitual interface for converterApp
-* create centimeter converstion area set the color and add to reciever
-* create feet converstion area set the color and add to observer
-* create meter converstion area set the color and add to observer
-* set displayFrame.
+/** DisplayPanel inherits the properties and functions of java’s JPanel concrete class.
+ *  It generates 3 JText areas that represent centimeters, feet and meters each with 
+ *  distinct colors. These JText areas are objects of their own respective classes that 
+ *  extend the JText class. The FeetConversionArea and MeterConversionArea objects
+ *   created are the observers used for the observer design pattern, which update 
+ *   and adjust their values accordingly whenever ValueToConvert’s state is changed. 
+ *   In addition, it maintains the references to receivers used by MenuBarListener in 
+ *   the Command pattern.
 */
 
 public class DisplayPanel extends JPanel {
@@ -34,6 +37,7 @@ public class DisplayPanel extends JPanel {
 	 */
 	public ValueToConvert valueModel;
 	
+	
 	public DisplayPanel() {
 		this.valueModel = new ValueToConvert();
 		JFrame displayFrame = new JFrame("Converter");
@@ -42,7 +46,7 @@ public class DisplayPanel extends JPanel {
 		displayFrame.add(this);
 		displayFrame.setJMenuBar(displayMenuBar);
 
-		menubarListener.setVTC(valueModel);
+		menubarListener.setRecieverVTC(valueModel);
 		this.setLayout(null);
 		CMA = new CentimetersConversionArea("0", 20, 20);
 		Color colorCentimeters = new Color(255, 255, 0);

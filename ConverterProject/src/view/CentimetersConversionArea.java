@@ -1,17 +1,17 @@
 package view;
 import javax.swing.*;
 
-/** 
-* CentimetersConversionArea for displayPanel
-*/
-
-	/*
-	* The class invariant is that there is always a value to convert
-	*/
+/**
+ * The CentimetersConversionArea is a class in the view package of the system which 
+ * inputs a value into its text area. It is used in the command design pattern as 
+ * a receiver that the MenuBarListener command acts on.
+ *
+ */
 public class CentimetersConversionArea extends JTextArea{
 	
 	/**
-	* constructor for JtextArea from DisplayPanel
+	* constructor for regular JTextArea
+	* 
  	* @param s A string contain preset text in MeterConversionArea
 	* @param x A integer to constructs JTextArea with the specified number of rows 
 	* @param y A integer to constructs JTextArea with the specified number of columns 
@@ -20,7 +20,7 @@ public class CentimetersConversionArea extends JTextArea{
 		super(s,x,y);
 	}
 	
-	/** Gets the text of the input.
+	/** Return the text in this JTextArea.
  	* @return A string of input in the JTextArea
 	*/
 	public String getValue() {
