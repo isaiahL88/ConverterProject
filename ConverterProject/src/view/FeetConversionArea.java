@@ -4,14 +4,17 @@ import java.text.DecimalFormat;
 
 import javax.swing.*;
 
+	
+	/*
+	* The class invariant is that there is always a value to convert
+	*/
+public class FeetConversionArea extends JTextArea implements Observer{
 	 /*
 	* constructor for JtextArea from DisplayPanel
  	* @param s A string contain preset text in MeterConversionArea
 	* @param x A integer to constructs JTextArea with the specified number of rows 
 	* @param y A integer to constructs JTextArea with the specified number of columns 
 	*/
-
-public class FeetConversionArea extends JTextArea implements Observer{
 	public FeetConversionArea(String s, int x, int y) {
 		super(s,x,y);
 	}
