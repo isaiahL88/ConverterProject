@@ -3,7 +3,10 @@ package view;
 import java.text.DecimalFormat;
 
 import javax.swing.*;
-
+	
+	/*
+	* The class invariant is that there is always a value to convert
+	*/
 public class MeterConversionArea extends JTextArea implements Observer{
 
         /*
