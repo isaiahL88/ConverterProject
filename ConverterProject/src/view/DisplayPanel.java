@@ -38,8 +38,13 @@ public class DisplayPanel extends JPanel {
 	public ValueToConvert valueModel;
 	
 	/**
+	 * This constructor creates the main display panel of the view, instantiating the 
+	 * Centimeter, Feet, and Meter Conversion Areas as well. It also connects the controller 
+	 * to the view of the system and connects the observer instances of class MeterConversion area and FeetConversionArea 
+	 * to the subject instance of class ValueToConvert.
 	 * 
-	 * @param model
+	 * @param model reference to model of system
+	 * @param controller reference to controller of the system
 	 */
 	public DisplayPanel(ValueToConvert model, MenubarListener controller) {
 		this.valueModel = model;
