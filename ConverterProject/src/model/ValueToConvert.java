@@ -7,9 +7,11 @@ import java.util.ArrayList;
 import view.Observer;
 
 /**
-* get and encapsulate the value, methods that relate to the Observers
-*/
-
+ *The ValueToConvert class is the model of the system that holds the inputed value in centimeters.
+ *It includes all the methods to the observers including add, remove and notify observer. 
+ *It is used in the Observer pattern as a subject and also used in the command pattern as a receiver. 
+ *
+ */
 public class ValueToConvert {
 	private double value;
 	//create list of observers
@@ -25,30 +27,29 @@ public class ValueToConvert {
 	}
 	
 	/**
-	* get the value of input
-	* postcondition: get the value of input from CentimetersConversionArea
+	* get the value of input. 
+	* 
 	* @return the input value in centimeteresConversionArea
 	*/
 	public double getValue() {
 		return this.value;
 	}
+	
 	/**
-	* update the value of input
-	* postcondition: the value encapsulated in is updated and send a 
-	* singal to Observer
+	* update the value of input. 
+	* Postcondition: the value encapsulated in is updated and the observers of
+	* this class are notified.
 	* @param value A double number that get from CentimetersConversionArea
 	*/
-	
 	public void setValue(double value) {
 		this.value = value;
 		notifyObserver();
 	}
-	//mutator for observer: attach detach notify
+
 	/**
 	*Adds an observer to the ArrayList of observers for this object
 	*@param o Observer that add into ArrayList
 	*/
-	
 	public void addObserver(Observer o) {
 		listOfObservers.add(o);
 	}
@@ -68,8 +69,6 @@ public class ValueToConvert {
 	public void notifyObserver() {
 		for (Observer o: listOfObservers)
 			o.updateVal(value);
-//		this.displayPanel.FCA.updateVal(value);
-//		this.displayPanel.MCA.updateVal(value);
 	}
 	
 }

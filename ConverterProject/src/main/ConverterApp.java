@@ -11,11 +11,12 @@ import view.ConverterMenuBar;
 import view.DisplayPanel;
 
 /** 
-* the main client and application class
+* ConverterApp is the main application class which initializes the Model, View, and Controller of the system. 
+* This class also connects these three parts to form the application.
 */
 public class ConverterApp {
 	/** 
-	* Our main method. to create an App that convert input in centimeter into feet and meter
+	* Main method of system to initialize and connect model, view, and controller of the system
 	* 
 	* @param args The command line arguments.
 	*/
