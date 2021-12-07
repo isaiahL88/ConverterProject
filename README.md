@@ -7,8 +7,7 @@ this application which converts a value inputed in centimeters to meters and fee
 In order to run this application simply import the repostiory and run the ConverApp.java class as an application in an IDE such as
 Eciplse. A demonstration of running this application is provided in the main folder.
 
-The API for this application is also provided in the main folder aswell as our report going through the introduction, design, 
-implimentation, and reflections for this project.
+The API for this application can be found under the ConverterProject/doc folders named index.html and our report going through the introduction, design, implimentation, and reflections for this project can be found in the main folder.
 
 Created by Isaiah Linares, Leong Li, Chun-Kit Chung, Yumming Yan
 
